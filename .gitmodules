@@ -1,0 +1,6 @@
+[submodule "ClassFlow-back"]
+	path = ClassFlow-back
+	url = https://github.com/prof-vukasinovic/ClassFlow-back.git
+[submodule "ClassFlow-front"]
+	path = ClassFlow-front
+	url = https://github.com/prof-vukasinovic/ClassFlow-front.git

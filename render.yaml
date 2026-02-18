@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: classflow-back
+    runtime: docker
+    dockerfilePath: ./ClassFlow-back/Dockerfile
+    dockerContext: ./ClassFlow-back
+    healthCheckPath: /ping
+
+  - type: web
+    name: classflow-front
+    runtime: docker
+    dockerfilePath: ./ClassFlow-front/Dockerfile
+    dockerContext: ./ClassFlow-front
+    healthCheckPath: /
