@@ -1,0 +1,22 @@
+version: "3.9"
+
+services:
+  classflow-back:
+    build:
+      context: ./ClassFlow-back
+      dockerfile: Dockerfile
+    image: classflow-back:latest
+    expose:
+      - "8080"
+    restart: unless-stopped
+
+  classflow-front:
+    build:
+      context: ./ClassFlow-front
+      dockerfile: Dockerfile
+    image: classflow-front:latest
+    ports:
+      - "80:80"
+    depends_on:
+      - classflow-back
+    restart: unless-stopped
